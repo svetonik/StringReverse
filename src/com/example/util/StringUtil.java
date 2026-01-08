@@ -1,5 +1,7 @@
-public class StringReverser {
-    public static String reverse(String str) {
+package com.example.util;
+
+public class StringUtil {
+    public static String reverseLetters(String str) {
         if (str == null || str.isEmpty()) {
             return str;
         }
@@ -8,13 +10,13 @@ public class StringReverser {
         int start = 0;
         int end = output.length - 1;
 
-        for (; start < end; ) {
+        while (start < end) {
             if (!Character.isLetter(output[start])) {
-                start++; // Пропускаем небуквенный символ слева
+                start++;
             } else if (!Character.isLetter(output[end])) {
-                end--; // Пропускаем небуквенный символ справа
+                end--;
             } else {
-                // Оба символа — буквы, меняем их местами
+
                 char temp = output[start];
                 output[start] = output[end];
                 output[end] = temp;
