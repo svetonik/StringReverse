@@ -1,3 +1,4 @@
+package com.example;
 import com.example.util.StringUtil;
 
 public class Main {
